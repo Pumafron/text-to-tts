@@ -8,7 +8,8 @@ import time
 
 
 def ejecutar_balabolka_solocore(voice: Voz, text: str, file: str):
-    args = ["balcon", "-p",str(voice.pitch),"-s",str(voice.rate),"-n", voice.voz, "-t", text, "-w", file]
+    #args = ["balcon", "-p",str(voice.pitch),"-s",str(voice.rate),"-n", voice.voz, "-t", text, "-w", file]
+    args = "balcon -p {} -s {} -n {} -t \"{}\" -w {}".format(voice.pitch,voice.rate,voice.voz,text,file)
     subprocess.run(args)
     print("se ha echo el audio {} con la voz {} en el archivo {}".format(text,voice.voz,file))
 
@@ -29,7 +30,7 @@ def loadVoices():
         voices : dict = json.load(json_file)
         for i in voices.keys():
             voz = voices[i]
-            list_of_voices.append(Voz(voz["voice"],prefix=voz["prefix"]))
+            list_of_voices.append( Voz(voz["voice"],prefix=voz["prefix"],pitch=voz["pitch"],rate=voz["rate"]) )
     return list_of_voices
 
 # @lib.timeis

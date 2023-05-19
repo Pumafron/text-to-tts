@@ -1,9 +1,9 @@
 import time
 class Voz:
-    def __init__(self,voz,tone=0,pitch=0,prefix="default:",sapi=5) -> None:
+    def __init__(self,voz,rate=0,pitch=0,prefix="default:",sapi=5) -> None:
         self.voz = voz
         self.pitch = pitch
-        self.rate = tone
+        self.rate = rate
         self.prefix = prefix
         self.sapi = sapi
     def generateDic(self):

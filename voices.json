@@ -1,16 +1,9 @@
 {
     "Lincoln": {
         "prefix": "Lincoln:",
-        "pitch": 0,
+        "pitch": 6,
         "rate": 0,
         "voice": "diego",
-        "sapi": 5
-    },
-    "Default": {
-        "prefix": "default:",
-        "pitch": 0,
-        "rate": 0,
-        "voice": "jorge",
         "sapi": 5
     },
     "Clyde": {
