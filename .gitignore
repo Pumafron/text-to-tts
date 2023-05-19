@@ -2,3 +2,4 @@ balcon.exe
 libsamplerate.dll
 out/
 readme.spa.txt
+__pycache__/

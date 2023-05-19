@@ -1,0 +1,23 @@
+{
+    "Lincoln": {
+        "prefix": "Lincoln:",
+        "pitch": 0,
+        "rate": 0,
+        "voice": "diego",
+        "sapi": 5
+    },
+    "Default": {
+        "prefix": "default:",
+        "pitch": 0,
+        "rate": 0,
+        "voice": "jorge",
+        "sapi": 5
+    },
+    "Clyde": {
+        "prefix": "Clyde:",
+        "pitch": 5,
+        "rate": 0,
+        "voice": "American Spanish male voice :: Carlos 44100 L",
+        "sapi": 4
+    }
+}
