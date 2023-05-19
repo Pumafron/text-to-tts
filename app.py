@@ -37,19 +37,6 @@ def procesarAudios(Dialogos):
     voice_list : List[Voz] = loadVoices() 
     default = Voz("jorge",0,0,"default")
 
-    # diccionario_vozes = {
-    # "Lincoln:" : "diego",
-    # "lincoln:" : "diego",
-    # "clyde:" : "American Spanish male voice :: Carlos 44100 L",
-    # "Clyde:" : "American Spanish male voice :: Carlos 44100 L",
-    # "John pork:" : "juan",
-    # "john pork:" : "juan",
-    # "default" : "jorge",
-    # "Lori:" : "Castilian Spanish female voice :: Carmen 44100 L",
-    # "lori:" : "Castilian Spanish female voice :: Carmen 44100 L",
-    # "lana:": "American Spanish female voice :: Soledad 44100 L",
-    # "Lana:" : "American Spanish female voice :: Soledad 44100 L"
-    # }
     for i in range(len(Dialogos)):
         selected_voice = default
         prefijo = "" 
