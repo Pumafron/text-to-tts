@@ -1,7 +1,7 @@
 {
     "Lincoln": {
         "prefix": "Lincoln:",
-        "pitch": 6,
+        "pitch": -1,
         "rate": 0,
         "voice": "diego",
         "sapi": 5
@@ -11,6 +11,20 @@
         "pitch": 5,
         "rate": 0,
         "voice": "American Spanish male voice :: Carlos 44100 L",
+        "sapi": 4
+    },
+    "Lory": {
+        "prefix": "Lori:",
+        "pitch": 5,
+        "rate": 0,
+        "voice": "Castilian Spanish female voice :: Carmen 44100 L",
+        "sapi": 4
+    }
+    ,"Lana": {
+        "prefix": "Lisa:",
+        "pitch": 5,
+        "rate": 0,
+        "voice": "American Spanish female voice :: Soledad 44100 L",
         "sapi": 4
     }
 }
