@@ -1,3 +1,7 @@
 1. interfaz grafica
 2. escojer el nombre de salida de los archivos
 3. un editor de voces o que te muestre las disponibles
+4. que el archivo donde se leen las historias y voces sean escojibles por el usuario, por defecto si no hay nada se crean vacios
+5. herramientas para facilitar el uso , como creacion de voces
+6. hacer una GUIA de uso
+7. hacer lo mas facil de usar el programa
