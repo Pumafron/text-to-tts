@@ -9,7 +9,7 @@ import time
 
 def ejecutar_balabolka_solocore(voice: Voz, text: str, file: str):
     #args = ["balcon", "-p",str(voice.pitch),"-s",str(voice.rate),"-n", voice.voz, "-t", text, "-w", file]
-    args = "balcon -p {} -s {} -n {} -t \"{}\" -w {}".format(voice.pitch,voice.rate,voice.voz,text,file)
+    args = "balcon -p {} -s {} -n \"{}\" -t \"{}\" -w {}".format(voice.pitch,voice.rate,voice.voz,text,file)
     subprocess.run(args)
     print("se ha echo el audio {} con la voz {} en el archivo {}".format(text,voice.voz,file))
 
@@ -48,7 +48,7 @@ def procesarAudios(Dialogos):
                 break
         if(Dialogos[i] != "\n" and Dialogos[i]!= ""):
             #esta linea elimina el prefijo
-            ejecutar_balabolka_solocore(selected_voice, "{}".format(Dialogos[i].replace(selected_voice.prefix,"")), "./out/ejemplo{:04}.wav".format(i))
+            ejecutar_balabolka_solocore(selected_voice, "{}.".format(Dialogos[i].replace(selected_voice.prefix,"")), "./out/fix{:04}.wav".format(i))
 
 
 @timeis

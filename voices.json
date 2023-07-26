@@ -6,25 +6,26 @@
         "voice": "diego",
         "sapi": 5
     },
-    "Clyde": {
-        "prefix": "Clyde:",
-        "pitch": 5,
+    "Bobi": {
+        "prefix": "Bobi:",
+        "pitch": 0,
         "rate": 0,
         "voice": "American Spanish male voice :: Carlos 44100 L",
         "sapi": 4
     },
     "Lory": {
-        "prefix": "Lori:",
+        "prefix": "Lory:",
         "pitch": 5,
         "rate": 0,
         "voice": "Castilian Spanish female voice :: Carmen 44100 L",
         "sapi": 4
     }
-    ,"Lana": {
-        "prefix": "Lisa:",
+    ,"Carol": {
+        "prefix": "Carol:",
         "pitch": 5,
         "rate": 0,
         "voice": "American Spanish female voice :: Soledad 44100 L",
         "sapi": 4
+        
     }
 }
