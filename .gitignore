@@ -1,6 +1,7 @@
 balcon.exe
 libsamplerate.dll
 out/
+tmp/
 readme.spa.txt
 __pycache__/
 historia.txt
