@@ -1,0 +1,46 @@
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>untitled</title>
+</head>
+
+<body>
+    <header>Text to tts</header>
+    <div>
+        <div><textarea name="" id="content-text" cols="30" rows="10"></textarea></div>
+        <div><button id="sendbutton">generate</button><a href="/getAudios">download</a><p id="status">status</p></div>
+    </div>
+</body>
+<script>
+    let texta = window.document.getElementById("content-text")
+    let button = window.document.getElementById("sendbutton")
+    let statuslabel = window.document.getElementById("status")
+    button.onclick = async () => {
+        statuslabel.innerText = "generating"
+        let headersList = {
+            "Accept": "*/*",
+            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
+            "Content-Type": "application/json"
+        }
+
+        let bodyContent = JSON.stringify({
+            "contenttext": texta.value
+        });
+
+        let response = await fetch("http://localhost:5000/generate", {
+            method: "POST",
+            body: bodyContent,
+            headers: headersList
+        });
+
+        let data = await response.text();
+        statuslabel.innerText = "ready"
+        console.log(data);
+
+
+    }
+    console.log(button)
+</script>
+
+</html>
