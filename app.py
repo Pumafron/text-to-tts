@@ -127,6 +127,33 @@ def foo():
 
     return jsonify(data)
 
+@app.route('/getVoices', methods=['GET']) 
+def getvoices():
+    process = subprocess.Popen(['balcon','-l'], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    out = process.communicate()[0]
+    processed = out.decode("u8").replace("\r","").replace("  ","").split("\n")
+    dicc = {
+        "None":[],
+        "SAPI 4:":[],
+        "SAPI 5:":[]
+    }
+    actualValue = "None"
+    for i in processed:
+        if(i == "SAPI 4:" or i == "SAPI 5:"):
+            actualValue = i
+            continue
+        dicc[actualValue].append(i)
+
+    del dicc['None']
+    return jsonify(dicc)
+
+@app.route('/getVoicesAvalaible', methods=['GET']) 
+def getvoicesAvalaible():
+     with open('voices.json') as json_file:
+        voices : dict = json.load(json_file)
+        return jsonify(voices)
+
+
 if __name__ == "__main__":
     #main()
     app.run(debug = True)
