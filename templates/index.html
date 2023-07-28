@@ -2,7 +2,8 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>untitled</title>
+    <title>Text To TTS</title>
+    <link rel="stylesheet" href="static/css/webuicss.css">
 </head>
 
 <body>
@@ -24,92 +25,13 @@
             </div>
         </div>
         <!-- el area de la lista de voces -->
-        <div class="ApisColor">
-            <p id="voices">voice list</p>
-        </div>
-        <div class="ApisColor">
-            <p id="availablevoices">voice char</p>
-        </div>
+        <section class="ApisColor" id="allvoices__section">
+            <div id="voices" class="articulos">voice list</div>
+        </section>
+        <section class="ApisColor">
+            <div id="availablevoices" class="articulos"></div>
+        </section>
     </div>
 </body>
-<script>
-    let texta = window.document.getElementById("content-text")
-    let button = window.document.getElementById("sendbutton")
-    let statuslabel = window.document.getElementById("status")
-    let voicesLabel = window.document.getElementById("voices")
-    let voicesAvalaibleLabel = window.document.getElementById("availablevoices")
-
-    //HARDCODE
-    async function getvoices(){
-    let response = await fetch("http://localhost:5000/getVoices");
-
-    let voicesJson = await response.text();
-    console.log(voicesJson);
-    voicesLabel.innerText= voicesJson
-    }
-    async function getvoicesAvalaible(){
-    let response = await fetch("http://localhost:5000/getVoicesAvalaible");
-
-    let voicesJson = await response.text();
-    console.log(voicesJson);
-    voicesAvalaibleLabel.innerText= voicesJson
-    }
-    getvoicesAvalaible()
-    getvoices()
-    //
-    
-    button.onclick = async () => {
-        statuslabel.innerText = "generating"
-        let headersList = {
-            "Accept": "*/*",
-            "User-Agent": "Thunder Client (https://www.thunderclient.com)",
-            "Content-Type": "application/json"
-        }
-
-        let bodyContent = JSON.stringify({
-            "contenttext": texta.value
-        });
-
-        let response = await fetch("http://localhost:5000/generate", {
-            method: "POST",
-            body: bodyContent,
-            headers: headersList
-        });
-
-        let data = await response.text();
-        statuslabel.innerText = "ready"
-        console.log(data);
-
-
-    }
-    console.log(button)
-</script>
-<style>
-.container {
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-}
-.container__interfaz{
-    display: grid;
-    grid-template-rows: repeat(3,1fr);
-}
-.alertBox {
-    padding: 1rem;
-    background-color: rgb(189, 182, 92);
-}
-.colorbg1 {
-    padding: 1rem;
-    background-color: rgb(197, 194, 147);
-}
-.ApisColor {
-    padding: 1rem;
-    background-color: rgb(197, 162, 204);
-    border: 0.3rem;
-    border-style: ridge;
-}
-.textarea{
-    width: 100%;
-}
-</style>
-
+<script src="static/js/webui.js"></script>
 </html>
