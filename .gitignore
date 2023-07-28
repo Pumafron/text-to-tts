@@ -4,4 +4,6 @@ out/
 tmp/
 readme.spa.txt
 __pycache__/
+vueJSclient/vue-project/node_modules/
+vueJSclient/vue-project/dis/
 historia.txt
