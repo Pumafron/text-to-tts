@@ -1,10 +1,10 @@
 <template>
     <div class="propriety_data">
         <div class="propriety_data--name">
-        <p>propriety name:</p>
+        <p>{{propriety_name}}</p>
         </div>
         <div>
-        <p>value</p>
+        <p>{{ propriety_value }}</p>
         </div>
     </div>
 </template>
@@ -15,3 +15,23 @@
     line-height: 0rem;
 }
 </style>
+<script>
+    export default {
+        props:{
+            propriety_value:{
+                type:String,
+                default : "undefined"
+            },
+            propriety_name:{
+                type:String,
+                default:"No name Prop"
+            }
+        
+        },
+        setup(){
+            return {
+            }
+        }
+
+    }
+</script>
