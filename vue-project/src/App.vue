@@ -37,7 +37,7 @@ async function fetchData() {
     const response = await axios.get('http://localhost:5000/api/getVoicesAvalaible');
     example_obj.value = response.data;
   } catch (error) {
-    console.error('Error en la solicitud:', error);
+    console.error('Error en la solicitud: ', error);
   }
 }
 
