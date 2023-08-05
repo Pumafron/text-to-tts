@@ -6,8 +6,8 @@
         "voice": "diego",
         "sapi": 5
     },
-    "Bobi": {
-        "prefix": "Bobi:",
+    "Juez": {
+        "prefix": "Juez:",
         "pitch": 0,
         "rate": 0,
         "voice": "American Spanish male voice :: Carlos 44100 L",
@@ -20,8 +20,8 @@
         "voice": "Castilian Spanish female voice :: Carmen 44100 L",
         "sapi": 4
     }
-    ,"Carol": {
-        "prefix": "Carol:",
+    ,"Lana": {
+        "prefix": "Lana:",
         "pitch": 5,
         "rate": 0,
         "voice": "American Spanish female voice :: Soledad 44100 L",

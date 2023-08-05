@@ -8,7 +8,7 @@ let section_all_voices = window.document.getElementById("allvoices__section")
 
 //HARDCODE
 async function getvoices() {
-    let response = await fetch("http://localhost:5000/getVoices");
+    let response = await fetch("http://localhost:5000/api/getVoices");
 
     let voicesJson = await response.json();
     console.log(voicesJson);
@@ -21,7 +21,7 @@ async function getvoices() {
     });
 }
 async function getvoicesAvalaible() {
-    let response = await fetch("http://localhost:5000/getVoicesAvalaible");
+    let response = await fetch("http://localhost:5000/api/getVoicesAvalaible");
 
     let voicesAJson = await response.json();
     console.log(voicesAJson);
