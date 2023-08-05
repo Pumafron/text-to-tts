@@ -53,6 +53,9 @@ onMounted(() => {
                     <p>Voice Name</p>
                     <input v-model="name_voice" placeholder="edit me" >
                 </div>
+                <div>
+                    <button>send</button>
+                </div>
             </div>
         </div>
     </div>

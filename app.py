@@ -9,7 +9,7 @@ from getAvalaibleVoices import urls6_blueprint
 #el prefijo usa voces, pero el audio o voz pronto se pondra en clases para detallar los acentos y el tipo de loquendo que es
 
 app = Flask(__name__)
-cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+cors = CORS(app, resources={r"/api/*": {"origins": "*"},r"/api/generate": {"origins": "*"}})
 app.register_blueprint(urls_blueprint)
 app.register_blueprint(urls2_blueprint,url_prefix='/api/getVoices')
 app.register_blueprint(generate_blueprint,url_prefix='/api/generate')
