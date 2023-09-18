@@ -47,7 +47,7 @@ button.onclick = async () => {
         "contenttext": texta.value
     });
 
-    let response = await fetch("http://localhost:5000/generate", {
+    let response = await fetch("http://localhost:5000/api/generate", {
         method: "POST",
         body: bodyContent,
         headers: headersList
